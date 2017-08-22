@@ -22,7 +22,7 @@
 			movecountArr.forEach(function(item, index, array) {
 				sum+=item;
 			});	
-			document.getElementById("movecountavg").innerHTML = sum/movecountArr.length;
+			document.getElementById("movecountavg").innerHTML = sum/movecountArr.length + " stm mean of " + movecountArr.length;
 
 		}
 	}
@@ -33,7 +33,7 @@
 		document.getElementById("movesTextArea").value = moveLog;
 		//document.getElementById("acn").href = ("https://alg.cubing.net/?setup="+document.getElementById("scrambleTextArea").value +"&alg=" + moveLog).replace(/\n/g, "%0A");
 		document.getElementById("acn").href = ("https://alg.cubing.net/?setup=" + currentScramble +"&alg=" + moveLog).replace(/\n/g, "%0A");
-		document.getElementById("moveCounter").innerHTML = countMoves(moveLog);
+		document.getElementById("moveCounter").innerHTML = countMoves(moveLog) + " stm";
 
 	}
 	function countMoves(algorithm){

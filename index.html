@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cube</title>
+<title>tsim</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@ p {
 		color: white;
 }
 </style>
-<textarea rows="2" cols="80" id="scrambleTextArea">F2 L B2 D' L2 F2 D' F R' F2 L2 F L' B' R D2 F L' U' L'</textarea>
+<textarea rows="2" cols="80" id="scrambleTextArea" placeholder="Paste your scramble here"></textarea>
 <br></br>
 <canvas id="cube" width="250" height="300" ></canvas>
 <br></br>
@@ -36,18 +36,23 @@ p {
 <script src="js/RubiksCube.js"></script>
 
 
-<textarea rows="10" cols="50" id="movesTextArea"></textarea>
+<textarea rows="10" cols="50" id="movesTextArea" placeholder="Moves"></textarea>
 <br></br>
 <a href="alg.cubing.net" id = "acn">alg.cubing.net</a>
 <!--<br></br>-->
-<p id="moveCounter">0</p> stm
+<p id="moveCounter">0 stm</p> 
 <!--
 Keyboard Controls: See <a href="http://www.ryanheise.com/cube/speed.html">here</a>. ' is M and [ is M'-->
 
 <p id="movecountList">Movecounts: </p>
-<p id="movecountavg">Average:</p>
+<p id="movecountavg"></p>
 
-
+Space: New random state scramble<br>
+Enter: Insert line break in reconstruction<br>
+Backspace: Perform user scramble
+Esc: Solve cube<br>
+Keyboard Controls: See <a href="http://www.ryanheise.com/cube/speed.html">here</a>. ' is M and [ is M'
+<br>
 
 </body>
 </html>
