@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cube</title>
+</head>
+<body>
+
+<style>
+body {
+	background: black;
+	font-family: Arial;
+		color: white;
+}
+p {
+    font-family: Arial;
+    font-size: 15px;
+		color: white;
+}
+</style>
+<textarea rows="2" cols="80" id="scrambleTextArea">F2 L B2 D' L2 F2 D' F R' F2 L2 F L' B' R D2 F L' U' L'</textarea>
+<br></br>
+<canvas id="cube" width="250" height="300" ></canvas>
+<br></br>
+
+<script src="js/alg_jison.js"></script>
+<script src="js/alg.js"></script>
+
+<script src="js/scramble_333.js"></script>
+
+<script src="js/cube.js"></script>
+<script src="js/solve.js"></script>
+
+<script src="js/keypress.js"></script>
+<script src="js/fullzbll.js"></script>
+
+<script src="js/RubiksCube.js"></script>
+
+
+<textarea rows="10" cols="50" id="movesTextArea"></textarea>
+<br></br>
+<a href="alg.cubing.net" id = "acn">alg.cubing.net</a>
+<!--<br></br>-->
+<p id="moveCounter">0</p> stm
+<!--
+Keyboard Controls: See <a href="http://www.ryanheise.com/cube/speed.html">here</a>. ' is M and [ is M'-->
+
+<p id="movecountList">Movecounts: </p>
+<p id="movecountavg">Average:</p>
+
+
+
+</body>
+</html>
