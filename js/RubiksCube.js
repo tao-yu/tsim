@@ -33,8 +33,8 @@
 		document.getElementById("movesTextArea").value = moveLog;
 		//document.getElementById("acn").href = ("https://alg.cubing.net/?setup="+document.getElementById("scrambleTextArea").value +"&alg=" + moveLog).replace(/\n/g, "%0A");
 		document.getElementById("acn").href = ("https://alg.cubing.net/?setup=" + currentScramble +"&alg=" + moveLog).replace(/\n/g, "%0A");
-		document.getElementById("JonatanCFOP").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog).replace(/\n/g, "");
-		document.getElementById("JonatanRoux").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog).replace(/\n/g, "");
+		document.getElementById("JonatanCFOP").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog + "&method=cfop").replace(/\n/g, "");
+		document.getElementById("JonatanRoux").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog + "&method=roux").replace(/\n/g, "");
 		document.getElementById("moveCounter").innerHTML = countMoves(moveLog) + " stm";
 
 	}
