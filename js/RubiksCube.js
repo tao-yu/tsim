@@ -74,6 +74,7 @@
 	}
 
 	var listener = new window.keypress.Listener();
+	window.listener = listener;
 	listener.simple_combo("i", function() {	doAlg("R");});
 	listener.simple_combo("k", function() {	doAlg("R'");});
 	listener.simple_combo("j", function() {	doAlg("U");});

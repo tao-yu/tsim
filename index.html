@@ -17,7 +17,7 @@ p {
 		color: white;
 }
 </style>
-<textarea rows="2" cols="80" id="scrambleTextArea" placeholder="Paste your scramble here"></textarea>
+<textarea rows="2" cols="80" id="scrambleTextArea" placeholder="Paste your scramble here" onfocus="window.listener.stop_listening();" onblur="window.listener.listen();"></textarea>
 <br></br>
 <canvas id="cube" width="250" height="300" ></canvas>
 <br></br>
@@ -36,13 +36,13 @@ p {
 <script src="js/RubiksCube.js"></script>
 
 
-<textarea rows="10" cols="50" id="movesTextArea" placeholder="Moves"></textarea>
+<textarea rows="10" cols="50" id="movesTextArea" placeholder="Moves" onfocus="window.listener.stop_listening();" onblur="window.listener.listen();"></textarea>
 <br></br>
 <a href="https://alg.cubing.net" id = "acn" target="_blank">alg.cubing.net</a><br>
 
 
-<a href="https://jonatanklosko.github.io/reconstructions/#/show?scramble=" id = "JonatanCFOP" target="_blank">Jonatan's reconstruction website (CFOP)</a><br>
-<a href="https://jonatanklosko.github.io/reconstructions/#/show?scramble=" id = "JonatanRoux" target="_blank">Jonatan's reconstruction website (Roux)</a><br>
+<a href="https://jonatanklosko.github.io/reconstructions/#/show?scramble=" id = "JonatanCFOP" target="_blank">Jonatan Klosko's reconstruction website (CFOP)</a><br>
+<a href="https://jonatanklosko.github.io/reconstructions/#/show?scramble=" id = "JonatanRoux" target="_blank">Jonatan Klosko's reconstruction website (Roux)</a><br>
 <!--<br></br>-->
 <p id="moveCounter">0 stm</p> 
 <!--
