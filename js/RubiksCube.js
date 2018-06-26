@@ -59,12 +59,12 @@
         return "https://alg.cubing.net/?setup=" + encodeURIComponent(scramble) +"&alg=" + encodeURIComponent(solution);
     }
     function countMoves(algorithm){
-        var noRot = algorithm.replace(/[xyz]\d*'?/g, "");
+        /*var noRot = algorithm.replace(/[xyz]\d*'?/g, "");
         if(noRot.trim() == ""){
             return 0;
         }
-        else return noRot.trim().split(/(?=[A-Za-z])/).length;
-
+        else return noRot.trim().split(/(?=[A-Za-z])/).length;*/
+        return alg.cube.countMoves(algorithm,  {metric: "btm"})
     }
     function obfusticate(algorithm){
         var rc = new RubiksCube();
