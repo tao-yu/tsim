@@ -177,29 +177,63 @@
 
     var listener = new window.keypress.Listener();
     window.listener = listener;
-    listener.simple_combo("i", function() {	doAlg("R");});
-    listener.simple_combo("k", function() {	doAlg("R'");});
-    listener.simple_combo("j", function() {	doAlg("U");});
-    listener.simple_combo("f", function() {	doAlg("U'");});
-    listener.simple_combo("h", function() {	doAlg("F");});
-    listener.simple_combo("g", function() {	doAlg("F'");});
-    listener.simple_combo("w", function() {	doAlg("B");});
-    listener.simple_combo("o", function() {	doAlg("B'");});
-    listener.simple_combo("d", function() {	doAlg("L");});
-    listener.simple_combo("e", function() {	doAlg("L'");});
-    listener.simple_combo("s", function() {	doAlg("D");});
-    listener.simple_combo("l", function() {	doAlg("D'");});
-    listener.simple_combo("u", function() {	doAlg("r");});
-    listener.simple_combo("m", function() {	doAlg("r'");});
-    listener.simple_combo("v", function() {	doAlg("l");});
-    listener.simple_combo("r", function() {	doAlg("l'");});
-    listener.simple_combo("`", function() {	doAlg("M");});
-    listener.simple_combo("'", function() {	doAlg("M");});
-    listener.simple_combo("[", function() {	doAlg("M'");});
-    listener.simple_combo("t", function() {	doAlg("x");});
-    listener.simple_combo("n", function() {	doAlg("x'");});
-    listener.simple_combo(";", function() {	doAlg("y");});
-    listener.simple_combo("a", function() {	doAlg("y'");});
+    /*listener.register_combo({
+        "keys"              : "i",
+        "on_keydown"        : function() {	doAlg("R");},
+        "is_solitary"      : true,
+    });
+    listener.register_combo({
+        "keys"              : "shift i",
+        "on_keydown"        : function() {	doAlg("M");}    
+    });*/
+
+    var keymaps = [
+
+        ["i", "R"], 
+        ["k" , "R'"],
+        ["j" , "U"],
+        ["f" , "U'"],
+        ["h" , "F"],
+        ["g" , "F'"],
+        ["w" , "B"],
+        ["o" , "B'"],
+        ["d" , "L"],
+        ["e" , "L'"],
+        ["s" , "D"],
+        ["l" , "D'"],
+        ["u" , "r"],
+        ["m" , "r'"],
+        ["v" , "l"],
+        ["r" , "l'"],
+        ["`" , "M"],
+        ["'" , "M"],
+        ["[" , "M'"],
+        ["t" , "x"],
+        ["n" , "x'"],
+        [";" , "y"],
+        ["a" , "y'"]];
+
+    var keymaps2 = [["shift j", "E' U'"],
+                    ["shift f", "E U"],
+                    ["shift h", "S F'"],
+                    ["shift g", "S' F"],
+                    ["shift l", "E' D"],
+                    ["shift s", "E D'"]
+                   ]
+    keymaps.forEach(function(keymap){
+        listener.register_combo({
+            "keys"              : keymap[0],
+            "on_keydown"        : function() {	doAlg(keymap[1]);},     
+        });
+    })
+
+    keymaps2.forEach(function(keymap){
+        listener.register_combo({
+            "keys"              : keymap[0],
+            "on_keydown"        : function() {	doAlg(keymap[1]);},
+        });
+    })
+
 
     listener.simple_combo("1", function() {	
         moveLog = "";
