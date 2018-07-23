@@ -211,28 +211,23 @@
         ["t" , "x"],
         ["n" , "x'"],
         [";" , "y"],
-        ["a" , "y'"]];
-
-    var keymaps2 = [["shift j", "E' U'"],
+        ["a" , "y'"],
+    ["shift j", "E' U'"],
                     ["shift f", "E U"],
                     ["shift h", "S F'"],
                     ["shift g", "S' F"],
                     ["shift l", "E' D"],
-                    ["shift s", "E D'"]
-                   ]
+                    ["shift s", "E D'"],
+                    ["x", "E"],
+                    [".", "E'"]];
+
+    
     keymaps.forEach(function(keymap){
         listener.register_combo({
             "keys"              : keymap[0],
             "on_keydown"        : function() {	doAlg(keymap[1]);},     
         });
-    })
-
-    keymaps2.forEach(function(keymap){
-        listener.register_combo({
-            "keys"              : keymap[0],
-            "on_keydown"        : function() {	doAlg(keymap[1]);},
-        });
-    })
+    });
 
 
     listener.simple_combo("1", function() {	
