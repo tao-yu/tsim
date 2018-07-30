@@ -50,6 +50,7 @@
         document.getElementById("acn").href = ("https://alg.cubing.net/?setup=" + currentScramble +"&alg=" + moveLog).replace(/\n/g, "%0A");
         document.getElementById("JonatanCFOP").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog + "&method=cfop").replace(/\n/g, "");
         document.getElementById("JonatanRoux").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog + "&method=roux").replace(/\n/g, "");
+        document.getElementById("JonatanZZ").href = ("https://jonatanklosko.github.io/reconstructions/#/show?scramble=" + currentScramble +"&solution=" + moveLog + "&method=ZZ").replace(/\n/g, "");
         document.getElementById("moveCounter").innerHTML = countMoves(moveLog) + " stm";
 
     }
@@ -212,16 +213,16 @@
         ["n" , "x'"],
         [";" , "y"],
         ["a" , "y'"],
-    ["shift j", "E' U'"],
-                    ["shift f", "E U"],
-                    ["shift h", "S F'"],
-                    ["shift g", "S' F"],
-                    ["shift l", "E' D"],
-                    ["shift s", "E D'"],
-                    ["x", "E"],
-                    [".", "E'"]];
+        ["shift j", "E' U'"],
+        ["shift f", "E U"],
+        ["shift h", "S F'"],
+        ["shift g", "S' F"],
+        ["shift l", "E' D"],
+        ["shift s", "E D'"],
+        ["x", "E"],
+        [".", "E'"]];
 
-    
+
     keymaps.forEach(function(keymap){
         listener.register_combo({
             "keys"              : keymap[0],
