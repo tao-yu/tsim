@@ -1817,6 +1817,35 @@ function drawSquare(r, cx, cy, w, fillColor) {
   var getZZLSScramble = function() {
 	return customScramble([3,4,5,6,7],[3,8,9,10,11],[2,3,4,5,6],[]);
   }
+  
+  var getCrossScramble = function() {
+    var rotations = ["x", "y", "z"];
+    var direction = ["", "2", "'"];
+    var randomOrientation = "";
+    
+    var i = 0;
+    for (i = 0; i < 3; i++){
+       randomOrientation += rotations[i];
+       randomOrientation += direction[Math.floor(Math.random() * direction.length)];
+       randomOrientation += " ";
+    }
+	return randomOrientation + customScramble([0,1,2,3,4,5,6,7],[0,1,2,3,8,9,10,11],[0,1,2,3,4,5,6,7],[0,1,2,3,8,9,10,11]);
+  }
+  
+  var getNonWhiteYellowCrossScramble = function() {
+
+    var z = ["z", "z2", "z'", ""];
+    var y = ["y", "y2", "y'", ""]
+    var randomOrientation = "x ";
+   
+    randomOrientation += z[Math.floor(Math.random() * z.length)];
+    randomOrientation += " ";
+
+    randomOrientation += y[Math.floor(Math.random() * y.length)];
+    randomOrientation += " ";
+
+	return randomOrientation + customScramble([0,1,2,3,4,5,6,7],[0,1,2,3,8,9,10,11],[0,1,2,3,4,5,6,7],[0,1,2,3,8,9,10,11]);
+  }
 
   var getRandomElement = function(array, r) {
     if (r) {
@@ -1859,7 +1888,9 @@ function drawSquare(r, cx, cy, w, fillColor) {
 	get2GLLScramble: get2GLLScramble,
 	getPLLScramble: getPLLScramble,
 	getZZLSScramble: getZZLSScramble,
-    getCustomScramble: getCustomScramble
+    getCustomScramble: getCustomScramble,
+    getCrossScramble: getCrossScramble,
+    getNonWhiteYellowCrossScramble: getNonWhiteYellowCrossScramble
   };
 
 })();

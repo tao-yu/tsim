@@ -156,10 +156,19 @@
             case "ZZLS":
                 return scramblers["333"].getZZLSScramble();
                 break;
+            case "Cross2":
+                return scramblers["333"].getNonWhiteYellowCrossScramble();
+                break;
+            case "Cross":
+                return scramblers["333"].getCrossScramble();
+                break;
+            
             case "42":
                 return generatePreScramble("", "M'UM, M'U'M, MUM', MU'M',M2, RUMU'R'M,R U R' U R U2' R' ,R U R' U' R' F R2 U' R' U' R U R' F' ,R U' R' ,R U' R' U2 R U' R' ,R' U' R U' R' U2 R,R U2' R' U R U R' ", 10000, true);
+                break;
             case "zipperls":
                 return generatePreScramble("", "U,RUR'URU2'R',RUR'U'R'FR2U'R'U'RUR'F',FRU'R'U'RUR'F'RUR'U'R'FRF',R'F'RURU'R'F,R'FRF'UF'U2'FU'RUR',FRUR'U'F',RUR'U'R'FRF',RU2'R'URU2'R'UF'U'F,FRF'LFR'F'L'", 10000, true);
+                break;
 
         }
     }
